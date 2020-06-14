@@ -15,6 +15,12 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 colorscheme gruvbox
 set background=dark
 
+" Spell check settings
+set spell spelllang=en_us
+set spell
+hi clear SpellBad
+hi SpellBad cterm=underline,bold ctermfg=red
+
 " Mappings for copying and pasting from system clipboard.
 vnoremap <C-c> "*y :let @+=@*<CR>
 map <C-v> "*P
